@@ -37,17 +37,17 @@ for item in vendas: -> item é a variavel de iteração e vendas a lista que ser
 
 ## Verificação da ocorrência de mais de um elemento com o maximo valor
 ```
-max_apareceu = max(contador.values())
+max_apareceu = max(contador.values()) -> a variavel max_apareceu captura o valor que mais apareceu, ou seja o maior valor do dicionario
 
-    for chave, valor in contador.items():
-        if  valor == max_apareceu:
-            lista_mais_apareceu.append(chave)
+    for chave, valor in contador.items(): -> Esse for é para iterar o meu dicionario, que usa o metodo items() que retorna uma tupla, Ex: (482, 4), ja a chave receve o valor 482 e valor o 4 da tupla
+        if  valor == max_apareceu: -> agora eu verifico se o valor que está no dicionario é compativel com o valor que mais apareceu
+            lista_mais_apareceu.append(chave) -> Caso o if seja True, eu adiciono na lista, se não, não faz nada
             
-    if len(lista_mais_apareceu) > 1:
+    if len(lista_mais_apareceu) > 1: -> Se a minha lista depois da iteração anterior for maior que 1, ou seja, ter mais de um elemento com o valor max, ele retorna a lista com os valores
         return print(f"Os itens que mais apareceram foram: {lista_mais_apareceu}")
-    else:
-        mais_apareceu = max(contador, key=contador.get)
-        return print(f"O item que mais apareceu foi: {mais_apareceu}")
+    else: -> Caso a lista só seja 1
+        mais_apareceu = max(contador, key=contador.get) -> Pega a chave que teve o maior valor e retorna
+        return print(f"O item que mais apareceu foi: {mais_apareceu}") 
 ```
 
 ## Chamadas do metodo e passagem dos inputs do desafio como parametros
